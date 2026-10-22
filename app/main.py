@@ -3,11 +3,14 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from routes import router
+from database import engine, Base
+import models
 
 BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR / "static"
 
 app = FastAPI()
+Base.metadata.create_all(bind=engine)
 app.include_router(router, prefix="/api")
 
 
