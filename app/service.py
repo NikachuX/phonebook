@@ -2,9 +2,9 @@ from sqlalchemy import select
 from fastapi import Depends
 from sqlalchemy.orm import Session
 
-from database import get_db
-from models import PhoneBook
-from schemas import ContactCreate
+from app.database import get_db
+from app.models import PhoneBook
+from app.schemas import ContactCreate
 
 
 class ContactNotFoundError(Exception):

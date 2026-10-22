@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends
-from schemas import ContactCreate, ContactResponse
-from service import get_contact_service, ContactService, DuplicateContactError, ContactNotFoundError
+
+from app.schemas import ContactCreate, ContactResponse
+from app.service import get_contact_service, ContactService, DuplicateContactError, ContactNotFoundError
 
 
 router = APIRouter()
