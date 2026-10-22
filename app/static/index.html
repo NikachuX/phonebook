@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Телефонная книга</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Телефонная книга</h1>
+
+        <section class="panel">
+            <h2 id="form-title">Добавить контакт</h2>
+
+            <form id="contact-form">
+                <label for="name">Имя</label>
+                <input id="name" name="name" required maxlength="100">
+
+                <label for="mobile">Телефон</label>
+                <input id="mobile" name="mobile" type="tel" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+
+                <div class="form-actions">
+                    <button type="submit" id="submit-button">
+                        Добавить
+                    </button>
+                    <button type="button" id="cancel-button" class="secondary" hidden>
+                        Отмена
+                    </button>
+                </div>
+            </form>
+
+            <p id="message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="contacts-section">
+            <h2>Контакты</h2>
+            <button id="refresh-button" class="secondary">Обновить список</button>
+            <p id="empty-message" hidden>Контактов пока нет.</p>
+            <div id="contacts-list"></div>
+        </section>
+    </main>
+</body>
+</html>

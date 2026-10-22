@@ -1,0 +1,115 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: Arial, sans-serif;
+    background: #f3f5f8;
+    color: #222;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.panel,
+.contact-card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0000000d;
+}
+
+.panel {
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd2da;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #2463eb;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.secondary {
+    background: #e5e7eb;
+    color: #222;
+}
+
+.danger {
+    background: #dc2626;
+}
+
+.form-actions,
+.card-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+#message {
+    margin-bottom: 0;
+    color: #b42318;
+}
+
+#contacts-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.contact-card h3 {
+    margin: 0 0 12px;
+}
+
+.contact-card p {
+    margin: 6px 0;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 18px 10px;
+    }
+
+    .panel,
+    .contact-card {
+        padding: 16px;
+    }
+}

@@ -29,7 +29,7 @@ def add_contact(data: ContactCreate, service: ContactService = Depends(get_conta
             detail="Contact with this phone already exists"
         )
 
-@router.put("/contacts/{id}")
+@router.put("/contacts/{id}", response_model=ContactResponse)
 def put_contact(id: int, contact: ContactCreate, service: ContactService = Depends(get_contact_service)):
     try:
         return service.put_contact(id, contact)
